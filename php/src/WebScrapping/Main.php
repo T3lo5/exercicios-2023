@@ -5,7 +5,12 @@ namespace Chuva\Php\WebScrapping;
 /**
  * Runner for the Webscrapping exercice.
  */
+
+// Ignore os avisos do DOMDocument
+libxml_use_internal_errors(true);
+
 class Main {
+    
 
   /**
    * Main runner, instantiates a Scrapper and runs.
@@ -21,3 +26,4 @@ class Main {
   }
 
 }
+
