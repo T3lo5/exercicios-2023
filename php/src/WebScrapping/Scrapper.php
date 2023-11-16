@@ -7,7 +7,6 @@ use Chuva\Php\WebScrapping\Entity\Person;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
-
 class Scrapper {
 
   public function scrap(\DOMDocument $dom): array {
