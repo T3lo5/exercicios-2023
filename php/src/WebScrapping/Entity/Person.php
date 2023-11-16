@@ -21,8 +21,9 @@ class Person {
    * Builder.
    */
   public function __construct($name, $institution) {
-    $this->name = $name;
-    $this->institution = $institution;
-  }
+    $this->name = $name ?? 'N/A';
+    $this->institution = $institution ?? 'N/A';
+}
+
 
 }
