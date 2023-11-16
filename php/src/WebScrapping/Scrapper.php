@@ -48,12 +48,12 @@ class Scrapper {
         // Adicione esta linha para verificar os dados em cada iteração
         print_r($data[$i]); 
 
-        $sheet->setCellValue('A' . ($i + 2), $data[$i]->getId());
-        $sheet->setCellValue('B' . ($i + 2), $data[$i]->getTitle());
+        $sheet->setCellValue('A' . ($i + 2), $data[$i]->id);
+        $sheet->setCellValue('B' . ($i + 2), $data[$i]->title);
 
         $authors = implode(', ', array_map(function (Person $person) {
-            return $person->getName();
-        }, $data[$i]->getAuthors()));
+            return $person->name;
+        }, $data[$i]->authors));
 
         $sheet->setCellValue('C' . ($i + 2), $authors);
     }
@@ -65,5 +65,5 @@ class Scrapper {
     } catch (\Throwable $e) {
         echo 'Erro ao salvar o arquivo: ' . $e->getMessage();
     }
-}
+  }
 }
