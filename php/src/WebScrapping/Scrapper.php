@@ -7,14 +7,8 @@ use Chuva\Php\WebScrapping\Entity\Person;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
-/**
- * Does the scrapping of a webpage.
- */
 class Scrapper {
 
-  /**
-   * Loads paper information from the HTML and returns the array with the data.
-   */
   public function scrap(\DOMDocument $dom): array {
     return [
       new Paper(
@@ -29,9 +23,6 @@ class Scrapper {
     ];
   }
 
-  /**
-   * Writes the paper data to a spreadsheet.
-   */
   public function writeToSpreadsheet(array $data, $filename = 'output.xlsx') {
     $filePath = __DIR__ . '/../../output/' . $filename; // Caminho absoluto do arquivo
 
